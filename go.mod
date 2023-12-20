@@ -1,4 +1,4 @@
-module github.com/JeanIzar/crud-go.git
+module github.com/JeanIzar/crud-go
 
 go 1.21.5
 
