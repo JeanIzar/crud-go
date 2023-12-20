@@ -141,7 +141,7 @@ func CreateTodo(context *gin.Context) {
 
 	result := db.Create(&todo)
 	if result.Error != nil {
-		context.JSON(http.StatusBadRequest, gin.H{"error": "Something went wrong"})
+		context.JSON(http.StatusBadRequest, gin.H{"error": "Hubo un error al registrar"})
 		return
 	}
 
@@ -191,7 +191,7 @@ func GetAllTodos(context *gin.Context) {
 
 	err := db.Find(&todos)
 	if err.Error != nil {
-		context.JSON(http.StatusBadRequest, gin.H{"error": "Error getting data"})
+		context.JSON(http.StatusBadRequest, gin.H{"error": "Error al obtener los datos"})
 		return
 	}
 
@@ -226,7 +226,7 @@ func UpdateTodo(context *gin.Context) {
 
 	todoById := db.Where("id = ?", idTodo).First(&todo)
 	if todoById.Error != nil {
-		context.JSON(http.StatusBadRequest, gin.H{"error": "Todo not found"})
+		context.JSON(http.StatusBadRequest, gin.H{"error": "Compra no ubicada"})
 		return
 	}
 
@@ -269,7 +269,7 @@ func UpdateTodo(context *gin.Context) {
 
 	result := db.Save(&todo)
 	if result.Error != nil {
-		context.JSON(http.StatusBadRequest, gin.H{"error": "Something went wrong"})
+		context.JSON(http.StatusBadRequest, gin.H{"error": "Ocurrio un error al actualizar"})
 		return
 	}
 
