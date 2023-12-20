@@ -38,7 +38,10 @@ create table compras_rf (
     fechreg datetime,
     fechact datetime,
     cod_us_reg integer,
-    cod_us_act integer
+    cod_us_act integer,
+    fech_created_at timestamp,
+    fech_updated_at timestamp,
+    fech_deleted_at timestamp
     )
 
 -- migrate:down
