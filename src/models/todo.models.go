@@ -18,9 +18,9 @@ type Todo struct {
 	Compra_Obser        string  //`json:"compraobser" sql:"type:text"`
 	Compra_total_item   int     //`json:"compratotalitem"`
 	Compra_tipo_cambio  float32 //`json:"compratipocambio" sql:"type:decimal(20,3)"`
-	Compra_vbb          float32 //`json:"compra_vbb" sql:"type:decimal(20,2)"`
+	Compra_vvb          float32 //`json:"compra_vvb" sql:"type:decimal(20,2)"`
 	Compra_dscto_item   float32 //`json:"compra_dscto_item" sql:"type:decimal(20,2)"`
-	Compra_Oper_G       float32 //`json:"compra_og" sql:"type:decimal(20,2)"`
+	Compra_Oper_g       float32 //`json:"compra_og" sql:"type:decimal(20,2)"`
 	Compra_Vvitem       float32 //`json:"compra_vvitem" sql:"type:decimal(20,2)"`
 	Compra_Dscto_global float32 //`json:"compra_dsctoglobal" sql:"decimal(20,2)"`
 	Compra_Isc          float32 //`json:"compra_isc" sql:"decimal(20,2)"`
@@ -30,9 +30,9 @@ type Todo struct {
 	Compra_Cargo        float32 //`json:"compra_cargo" sql:"decimal(20,2)"`
 	Compra_Tot_v        float32 //`json:"compra_totv" sql:"decimal(20,2)"`
 	Compra_Tot_v_mn     float32 //`json:"compra_totvmn" sql:"decimal(20,2)"`
-	Compra_Oper_A       float32 //`json:"compra_oa" sql:"decimal(20,2)"`
-	Compra_Oper_I       float32 //`json:"compra_oi" sql:"decimal(20,2)"`
-	Compra_Oper_E       float32 //`json:"compra_oe" sql:"decimal(20,2)"`
+	Compra_Oper_a       float32 //`json:"compra_oa" sql:"decimal(20,2)"`
+	Compra_Oper_i       float32 //`json:"compra_oi" sql:"decimal(20,2)"`
+	Compra_Oper_e       float32 //`json:"compra_oe" sql:"decimal(20,2)"`
 	Compra_Cant_Pago    int     //`json:"compra_cantpago"`
 	IDEstado            int     //`json:"idestado"`
 	IDProveedor         int     //`json:"idproveedor"`
@@ -47,4 +47,8 @@ type Todo struct {
 	Compra_Cant_Asiento int     //`json:"compra_cantasiento"`
 	Cod_Usua_Reg        int     //`json:"cod_us_reg"`
 	Cod_Usua_Act        int     //`json:"cod_us_act"`
+}
+
+func (Todo) TableName() string {
+	return "compras_rf"
 }

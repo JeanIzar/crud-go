@@ -25,9 +25,9 @@ type todoRequest struct {
 	Compra_Obser        string  `json:"compraobser" sql:"type:text"`
 	Compra_total_item   int     `json:"compratotalitem"`
 	Compra_tipo_cambio  float32 `json:"compratipocambio" sql:"type:decimal(20,3)"`
-	Compra_vbb          float32 `json:"compra_vbb" sql:"type:decimal(20,2)"`
+	Compra_vvb          float32 `json:"compra_vvb" sql:"type:decimal(20,2)"`
 	Compra_dscto_item   float32 `json:"compra_dscto_item" sql:"type:decimal(20,2)"`
-	Compra_Oper_G       float32 `json:"compra_og" sql:"type:decimal(20,2)"`
+	Compra_Oper_g       float32 `json:"compra_og" sql:"type:decimal(20,2)"`
 	Compra_Vvitem       float32 `json:"compra_vvitem" sql:"type:decimal(20,2)"`
 	Compra_Dscto_global float32 `json:"compra_dsctoglobal" sql:"decimal(20,2)"`
 	Compra_Isc          float32 `json:"compra_isc" sql:"decimal(20,2)"`
@@ -37,9 +37,9 @@ type todoRequest struct {
 	Compra_Cargo        float32 `json:"compra_cargo" sql:"decimal(20,2)"`
 	Compra_Tot_v        float32 `json:"compra_totv" sql:"decimal(20,2)"`
 	Compra_Tot_v_mn     float32 `json:"compra_totvmn" sql:"decimal(20,2)"`
-	Compra_Oper_A       float32 `json:"compra_oa" sql:"decimal(20,2)"`
-	Compra_Oper_I       float32 `json:"compra_oi" sql:"decimal(20,2)"`
-	Compra_Oper_E       float32 `json:"compra_oe" sql:"decimal(20,2)"`
+	Compra_Oper_a       float32 `json:"compra_oa" sql:"decimal(20,2)"`
+	Compra_Oper_i       float32 `json:"compra_oi" sql:"decimal(20,2)"`
+	Compra_Oper_e       float32 `json:"compra_oe" sql:"decimal(20,2)"`
 	Compra_Cant_Pago    int     `json:"compra_cantpago"`
 	IDEstado            int     `json:"idestado"`
 	IDProveedor         int     `json:"idproveedor"`
@@ -69,9 +69,9 @@ type todoResponse struct {
 	Compra_Obser        string  `json:"compraobser" sql:"type:text"`
 	Compra_total_item   int     `json:"compratotalitem"`
 	Compra_tipo_cambio  float32 `json:"compratipocambio" sql:"type:decimal(20,3)"`
-	Compra_vbb          float32 `json:"compra_vbb" sql:"type:decimal(20,2)"`
+	Compra_vvb          float32 `json:"compra_vvb" sql:"type:decimal(20,2)"`
 	Compra_dscto_item   float32 `json:"compra_dscto_item" sql:"type:decimal(20,2)"`
-	Compra_Oper_G       float32 `json:"compra_og" sql:"type:decimal(20,2)"`
+	Compra_Oper_g       float32 `json:"compra_og" sql:"type:decimal(20,2)"`
 	Compra_Vvitem       float32 `json:"compra_vvitem" sql:"type:decimal(20,2)"`
 	Compra_Dscto_global float32 `json:"compra_dsctoglobal" sql:"decimal(20,2)"`
 	Compra_Isc          float32 `json:"compra_isc" sql:"decimal(20,2)"`
@@ -81,9 +81,9 @@ type todoResponse struct {
 	Compra_Cargo        float32 `json:"compra_cargo" sql:"decimal(20,2)"`
 	Compra_Tot_v        float32 `json:"compra_totv" sql:"decimal(20,2)"`
 	Compra_Tot_v_mn     float32 `json:"compra_totvmn" sql:"decimal(20,2)"`
-	Compra_Oper_A       float32 `json:"compra_oa" sql:"decimal(20,2)"`
-	Compra_Oper_I       float32 `json:"compra_oi" sql:"decimal(20,2)"`
-	Compra_Oper_E       float32 `json:"compra_oe" sql:"decimal(20,2)"`
+	Compra_Oper_a       float32 `json:"compra_oa" sql:"decimal(20,2)"`
+	Compra_Oper_i       float32 `json:"compra_oi" sql:"decimal(20,2)"`
+	Compra_Oper_e       float32 `json:"compra_oe" sql:"decimal(20,2)"`
 	Compra_Cant_Pago    int     `json:"compra_cantpago"`
 	IDEstado            int     `json:"idestado"`
 	IDProveedor         int     `json:"idproveedor"`
@@ -120,9 +120,9 @@ func CreateTodo(context *gin.Context) {
 	todo.Compra_Obser = data.Compra_Obser
 	todo.Compra_total_item = data.Compra_total_item
 	todo.Compra_tipo_cambio = data.Compra_tipo_cambio
-	todo.Compra_vbb = data.Compra_vbb
+	todo.Compra_vvb = data.Compra_vvb
 	todo.Compra_dscto_item = data.Compra_dscto_item
-	todo.Compra_Oper_G = data.Compra_Oper_G
+	todo.Compra_Oper_g = data.Compra_Oper_g
 	todo.Compra_Vvitem = data.Compra_Vvitem
 	todo.Compra_Dscto_global = data.Compra_Dscto_global
 	todo.Compra_Isc = data.Compra_Isc
@@ -131,9 +131,9 @@ func CreateTodo(context *gin.Context) {
 	todo.Compra_Cargo = data.Compra_Cargo
 	todo.Compra_Tot_v = data.Compra_Tot_v
 	todo.Compra_Tot_v_mn = data.Compra_Tot_v_mn
-	todo.Compra_Oper_A = data.Compra_Oper_A
-	todo.Compra_Oper_I = data.Compra_Oper_I
-	todo.Compra_Oper_E = data.Compra_Oper_E
+	todo.Compra_Oper_a = data.Compra_Oper_a
+	todo.Compra_Oper_i = data.Compra_Oper_i
+	todo.Compra_Oper_e = data.Compra_Oper_e
 	todo.Compra_Cant_Pago = data.Compra_Cant_Pago
 	todo.IDEstado = data.IDEstado
 	todo.IDProveedor = data.IDProveedor
@@ -166,9 +166,9 @@ func CreateTodo(context *gin.Context) {
 	response.Compra_Obser = todo.Compra_Obser
 	response.Compra_total_item = todo.Compra_total_item
 	response.Compra_tipo_cambio = todo.Compra_tipo_cambio
-	response.Compra_vbb = todo.Compra_vbb
+	response.Compra_vvb = todo.Compra_vvb
 	response.Compra_dscto_item = todo.Compra_dscto_item
-	response.Compra_Oper_G = todo.Compra_Oper_G
+	response.Compra_Oper_g = todo.Compra_Oper_g
 	response.Compra_Vvitem = todo.Compra_Vvitem
 	response.Compra_Dscto_global = todo.Compra_Dscto_global
 	response.Compra_Isc = todo.Compra_Isc
@@ -177,9 +177,9 @@ func CreateTodo(context *gin.Context) {
 	response.Compra_Cargo = todo.Compra_Cargo
 	response.Compra_Tot_v = todo.Compra_Tot_v
 	response.Compra_Tot_v_mn = todo.Compra_Tot_v_mn
-	response.Compra_Oper_A = todo.Compra_Oper_A
-	response.Compra_Oper_I = todo.Compra_Oper_I
-	response.Compra_Oper_E = todo.Compra_Oper_E
+	response.Compra_Oper_a = todo.Compra_Oper_a
+	response.Compra_Oper_i = todo.Compra_Oper_i
+	response.Compra_Oper_e = todo.Compra_Oper_e
 	response.Compra_Cant_Pago = todo.Compra_Cant_Pago
 	response.IDEstado = todo.IDEstado
 	response.IDProveedor = todo.IDProveedor
@@ -200,8 +200,7 @@ func CreateTodo(context *gin.Context) {
 func GetAllTodos(context *gin.Context) {
 	var todos []models.Todo
 
-	err := db.Find(&todos)
-	if err.Error != nil {
+	if err := db.Find(&todos).Error; err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"error": "Error al obtener los datos"})
 		return
 	}
@@ -235,7 +234,7 @@ func UpdateTodo(context *gin.Context) {
 
 	todo := models.Todo{}
 
-	todoById := db.Where("id = ?", idTodo).First(&todo)
+	todoById := db.Where("id_compra = ?", idTodo).Order("id_compra").First(&todo)
 	if todoById.Error != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"error": "Compra no ubicada"})
 		return
@@ -252,9 +251,9 @@ func UpdateTodo(context *gin.Context) {
 	todo.Compra_Obser = data.Compra_Obser
 	todo.Compra_total_item = data.Compra_total_item
 	todo.Compra_tipo_cambio = data.Compra_tipo_cambio
-	todo.Compra_vbb = data.Compra_vbb
+	todo.Compra_vvb = data.Compra_vvb
 	todo.Compra_dscto_item = data.Compra_dscto_item
-	todo.Compra_Oper_G = data.Compra_Oper_G
+	todo.Compra_Oper_g = data.Compra_Oper_g
 	todo.Compra_Vvitem = data.Compra_Vvitem
 	todo.Compra_Dscto_global = data.Compra_Dscto_global
 	todo.Compra_Isc = data.Compra_Isc
@@ -263,9 +262,9 @@ func UpdateTodo(context *gin.Context) {
 	todo.Compra_Cargo = data.Compra_Cargo
 	todo.Compra_Tot_v = data.Compra_Tot_v
 	todo.Compra_Tot_v_mn = data.Compra_Tot_v_mn
-	todo.Compra_Oper_A = data.Compra_Oper_A
-	todo.Compra_Oper_I = data.Compra_Oper_I
-	todo.Compra_Oper_E = data.Compra_Oper_E
+	todo.Compra_Oper_a = data.Compra_Oper_a
+	todo.Compra_Oper_i = data.Compra_Oper_i
+	todo.Compra_Oper_e = data.Compra_Oper_e
 	todo.Compra_Cant_Pago = data.Compra_Cant_Pago
 	todo.IDEstado = data.IDEstado
 	todo.IDProveedor = data.IDProveedor
@@ -298,7 +297,7 @@ func UpdateTodo(context *gin.Context) {
 	response.Compra_Obser = todo.Compra_Obser
 	response.Compra_total_item = todo.Compra_total_item
 	response.Compra_tipo_cambio = todo.Compra_tipo_cambio
-	response.Compra_vbb = todo.Compra_vbb
+	response.Compra_vvb = todo.Compra_vvb
 	response.Compra_Vvitem = todo.Compra_Vvitem
 	response.Compra_Dscto_global = todo.Compra_Dscto_global
 	response.Compra_Isc = todo.Compra_Isc
@@ -307,9 +306,9 @@ func UpdateTodo(context *gin.Context) {
 	response.Compra_Cargo = todo.Compra_Cargo
 	response.Compra_Tot_v = todo.Compra_Tot_v
 	response.Compra_Tot_v_mn = todo.Compra_Tot_v_mn
-	response.Compra_Oper_A = todo.Compra_Oper_A
-	response.Compra_Oper_I = todo.Compra_Oper_I
-	response.Compra_Oper_E = todo.Compra_Oper_E
+	response.Compra_Oper_a = todo.Compra_Oper_a
+	response.Compra_Oper_i = todo.Compra_Oper_i
+	response.Compra_Oper_e = todo.Compra_Oper_e
 	response.Compra_Cant_Pago = todo.Compra_Cant_Pago
 	response.IDEstado = todo.IDEstado
 	response.IDProveedor = todo.IDProveedor
@@ -332,7 +331,7 @@ func DeleteTodo(context *gin.Context) {
 	reqParamId := context.Param("idTodo")
 	idTodo := cast.ToUint(reqParamId)
 
-	delete := db.Where("id = ?", idTodo).Unscoped().Delete(&todo)
+	delete := db.Where("id_compra = ?", idTodo).Unscoped().Delete(&todo)
 	fmt.Println(delete)
 
 	context.JSON(http.StatusOK, gin.H{
