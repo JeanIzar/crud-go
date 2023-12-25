@@ -231,21 +231,15 @@ func UpdateTodo(context *gin.Context) {
 		context.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-
-	//todo := models.Todo{}
-	var todo models.Todo
-	result := db.Where("id_compra = ?", idTodo).Limit(1).Find(&todo)
-	if result.Error != nil {
-		// Manejar el error, como devolver un mensaje de error al cliente
-		context.JSON(http.StatusInternalServerError, gin.H{"error": result.Error.Error()})
-		return
-	}
-
-	todoById := db.Where("id_compra = ?", idTodo).Order("id_compra").First(&todo)
+	
+	//Opcion 1
+	todo := models.Todo{}
+	todoById := db.Where("id_compra=?", idTodo).First(&todo)
 	if todoById.Error != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"error": "Compra no ubicada"})
 		return
 	}
+
 
 	todo.IDCompra = data.IDCompra
 	todo.Compracod = data.Compracod
@@ -286,18 +280,14 @@ func UpdateTodo(context *gin.Context) {
 	todo.Cod_Usua_Reg = data.Cod_Usua_Reg
 	todo.Cod_Usua_Act = data.Cod_Usua_Act
 
-	//result := db.Save(&todo)
-	//if result.Error != nil {
-	//	context.JSON(http.StatusBadRequest, gin.H{"error": "Ocurrio un error al actualizar"})
-	//	return
-	//}
-
-	result = db.Save(&todo)
-	if result.RowsAffected == 0 {
-		context.JSON(http.StatusBadRequest, gin.H{"error": "No se encontró el registro para actualizar"})
+	//Opcion1
+	result := db.Where("id_compra = ?", idTodo).Updates(&todo)
+	if result.Error != nil {
+		context.JSON(http.StatusBadRequest, gin.H{"error": "Ocurrio un error al actualizar"})
 		return
 	}
 
+	
 	var response todoResponse
 	response.IDCompra = todo.IDCompra
 	response.Compracod = todo.Compracod

@@ -1,12 +1,7 @@
 package models
 
-import (
-	"gorm.io/gorm"
-)
-
 // Defines todo table for database communications
 type Todo struct {
-	gorm.Model
 	IDCompra            uint    //`json:"idcompra" gorm:"primaryKey"`
 	Compracod           int     //`json:"compracod"`
 	Codigo              string  //`json:"codigo" sql:"varchar(45)"`
