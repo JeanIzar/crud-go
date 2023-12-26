@@ -55,6 +55,8 @@ CREATE TABLE `compras_rf` (
   `prov_contacto` varchar(50) DEFAULT NULL,
   `prov_telefono` varchar(20) DEFAULT NULL,
   `prov_correo` varchar(50) DEFAULT NULL,
+  `fech_reg` datetime NOT NULL,
+  `fech_act` datetime NOT NULL,
   `cod_usua_reg` int NOT NULL,
   `cod_usua_act` int NOT NULL,
   PRIMARY KEY (`idcompra`)

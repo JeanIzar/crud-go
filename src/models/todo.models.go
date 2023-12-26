@@ -38,6 +38,8 @@ type Todo struct {
 	Prov_Contacto       string  //`json:"prov_contacto" sql:"type:varchar(50)"`
 	Prov_Telefono       string  //`json:"prov_telefono" sql:"type:varchar(20)"`
 	Prov_Correo         string  //`json:"prov_correo" sql:"type:varchar(50)"`
+	Fech_Reg            string  //`json:"fech_reg" sql:"type:datetime"`
+	Fech_Act            string  //`json:"fech_act" sql:"type:datetime"`
 	Cod_Usua_Reg        int     //`json:"cod_us_reg"`
 	Cod_Usua_Act        int     //`json:"cod_us_act"`
 }

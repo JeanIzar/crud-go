@@ -50,6 +50,8 @@ type todoRequest struct {
 	Prov_Contacto       string  `json:"prov_contacto" sql:"type:varchar(50)"`
 	Prov_Telefono       string  `json:"prov_telefono" sql:"type:varchar(20)"`
 	Prov_Correo         string  `json:"prov_correo" sql:"type:varchar(50)"`
+	Fech_Reg            string  `json:"fech_reg" sql:"type:datetime"`
+	Fech_Act            string  `json:"fech_act" sql:"type:datetime"`
 	Cod_Usua_Reg        int     `json:"cod_us_reg"`
 	Cod_Usua_Act        int     `json:"cod_us_act"`
 }
@@ -92,6 +94,8 @@ type todoResponse struct {
 	Prov_Contacto       string  `json:"prov_contacto" sql:"type:varchar(50)"`
 	Prov_Telefono       string  `json:"prov_telefono" sql:"type:varchar(20)"`
 	Prov_Correo         string  `json:"prov_correo" sql:"type:varchar(50)"`
+	Fech_Reg            string  `json:"fech_reg" sql:"type:datetime"`
+	Fech_Act            string  `json:"fech_act" sql:"type:datetime"`
 	Cod_Usua_Reg        int     `json:"cod_us_reg"`
 	Cod_Usua_Act        int     `json:"cod_us_act"`
 }
@@ -141,6 +145,8 @@ func CreateTodo(context *gin.Context) {
 	todo.Prov_Contacto = data.Prov_Contacto
 	todo.Prov_Telefono = data.Prov_Telefono
 	todo.Prov_Telefono = data.Prov_Telefono
+	todo.Fech_Reg = data.Fech_Reg
+	todo.Fech_Act = data.Fech_Act
 	todo.Cod_Usua_Reg = data.Cod_Usua_Reg
 	todo.Cod_Usua_Act = data.Cod_Usua_Act
 
@@ -187,6 +193,8 @@ func CreateTodo(context *gin.Context) {
 	response.Prov_Contacto = todo.Prov_Contacto
 	response.Prov_Telefono = todo.Prov_Telefono
 	response.Prov_Telefono = todo.Prov_Telefono
+	response.Fech_Reg = todo.Fech_Reg
+	response.Fech_Act = todo.Fech_Act
 	response.Cod_Usua_Reg = todo.Cod_Usua_Reg
 	response.Cod_Usua_Act = todo.Cod_Usua_Act
 
@@ -287,6 +295,8 @@ func UpdateTodo(context *gin.Context) {
 	todo.Prov_Contacto = data.Prov_Contacto
 	todo.Prov_Telefono = data.Prov_Telefono
 	todo.Prov_Telefono = data.Prov_Telefono
+	todo.Fech_Reg = data.Fech_Reg
+	todo.Fech_Act = data.Fech_Act
 	todo.Cod_Usua_Reg = data.Cod_Usua_Reg
 	todo.Cod_Usua_Act = data.Cod_Usua_Act
 
@@ -334,6 +344,8 @@ func UpdateTodo(context *gin.Context) {
 	response.Prov_Contacto = todo.Prov_Contacto
 	response.Prov_Telefono = todo.Prov_Telefono
 	response.Prov_Telefono = todo.Prov_Telefono
+	response.Fech_Reg = todo.Fech_Reg
+	response.Fech_Act = todo.Fech_Act
 	response.Cod_Usua_Reg = todo.Cod_Usua_Reg
 	response.Cod_Usua_Act = todo.Cod_Usua_Act
 

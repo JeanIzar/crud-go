@@ -39,6 +39,8 @@ create table compras_rf (
     prov_contacto varchar(50),
     prov_telefono varchar(20),
     prov_correo varchar(50),
+    fech_reg datetime not null,
+    fech_act datetime not null,
     cod_usua_reg integer not null,
     cod_usua_act integer not null
     )
