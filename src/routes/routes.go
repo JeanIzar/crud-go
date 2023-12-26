@@ -11,9 +11,10 @@ func Routes() {
 
 	route.POST("/todo", controllers.CreateTodo)
 	route.GET("/todo", controllers.GetAllTodos)
+	route.GET("/todo/:idTodo", controllers.GetIdTodo)
 	route.PUT("/todo/:idTodo", controllers.UpdateTodo)
 	route.DELETE("/todo/:idTodo", controllers.DeleteTodo)
 
 	// Run route whenever triggered
-	route.Run()
+	route.Run(":3000")
 }

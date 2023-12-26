@@ -222,6 +222,21 @@ func GetAllTodos(context *gin.Context) {
 
 }
 
+func GetIdTodo(context *gin.Context) {
+	todo := models.Todo{}
+	reqParamId := context.Param("idTodo")
+	idTodo := cast.ToUint(reqParamId)
+
+	compra := db.Where("id_compra = ?", idTodo).Unscoped().First(&todo)
+	fmt.Println(compra)
+	
+	context.JSON(http.StatusOK, gin.H{
+		"status": "200",
+		"message": "Success",
+		"data": todo,
+	})
+}
+
 func UpdateTodo(context *gin.Context) {
 	var data todoRequest
 	reqParamId := context.Param("idTodo")
